@@ -1,0 +1,51 @@
+$black-color: #212326;
+$primary: #F26241;
+$primary-dark-1: #A64732;
+$primary-dark-2: #733729;
+$white: #F2F2F2;
+
+.sub-container {
+    height: 100vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    margin-right: 0;
+    margin-left: 75px;
+    padding-bottom: 0;
+}
+
+.primary-color {
+    color: $primary;
+}
+
+.hook {
+    margin-left: 7px;
+    border-radius: 50%;
+    border-color: white;
+    border: solid;
+    border-width: 1px;
+    width: 79px;
+    height: 79px;
+    text-align: center;
+    padding-top: 1%;
+    font-size: 2Rem;
+}
+
+.main-text {
+    font-style: 65 medium;
+    font-size: 3.5Rem;
+    font-weight: 500;
+}
+
+.hover {
+    cursor: pointer;
+}
+
+:root {
+    font-size: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
