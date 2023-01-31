@@ -1,6 +1,5 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HeaderBar from '../components/HeaderBar.vue';
 import HomeComponentHead from '../components/HomeComponentHead.vue';
 import AboutMeComponent from '../components/AboutMeComponent.vue';
 import ProjectComponent from '../components/ProjectComponent.vue';
@@ -12,7 +11,6 @@ export default defineComponent({
     name: 'HomeView',
 
     components: {
-        HeaderBar,
         HomeComponentHead,
         AboutMeComponent,
         ProjectComponent,

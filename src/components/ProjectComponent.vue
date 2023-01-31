@@ -1,7 +1,5 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import ProjectCardComponent from './ProjectCardComponent.vue';
-import { projectAPI, Project } from '../api/projectApi'
 export default defineComponent({
     name: "ProjectComponent",
     data() {
@@ -26,7 +24,7 @@ export default defineComponent({
                     title: "Sentimental analysis",
                     description: "Trained a model to predict a rating from an article review, using amazon dataset, and google pretrained word2vec model",
                     githuburl: 'https://colab.research.google.com/drive/1MBqLBH4LKTduP9Gagop2OC1JUEb0BkB9',
-                    spec: ['Word2Vec', 'LSTM'],
+                    spec: ['Word2Vec', 'LSTM', ],
                     docurl: ''
                 },
                 {
@@ -47,7 +45,6 @@ export default defineComponent({
             window.open(url, 'h_blank')
         }
     },
-    components: { ProjectCardComponent }
 })
 </script>
      
