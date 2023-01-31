@@ -1,13 +1,11 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { RouterView } from 'vue-router';
-import HeaderBar from './components/HeaderBar.vue'
 export default defineComponent({
   name: 'App',
 
   components: {
     RouterView,
-    HeaderBar
   },
 
   data() {
@@ -20,7 +18,6 @@ export default defineComponent({
 
 <template>
   <v-app>
-    <!-- <HeaderBar /> -->
     <v-main>
       <RouterView :key="$route.path" />
     </v-main>
