@@ -11,6 +11,7 @@ export default defineComponent({
                 'Experience',
                 'Contact',
             ],
+            dialog: false
         }
     },
     methods: {
@@ -22,7 +23,7 @@ export default defineComponent({
 </script>
  
 <template>
-    <div class="menu">
+    <div class="menu d-none d-md-flex">
         <a href="#app">
             <v-btn class="button" style="margin-right:56px">
                 Home
@@ -43,6 +44,43 @@ export default defineComponent({
                 Project
             </v-btn>
         </a>
+    </div>
+    <div class="menu d-flex d-md-none">
+        <v-dialog v-model="dialog" fullscreen :scrim="false" transition="dialog-bottom-transition">
+            <template v-slot:activator="{ props }">
+                <v-btn icon="mdi-menu" color="primary" dark v-bind="props" />
+            </template>
+            <div class="main d-flex flex-column justify-space-around align-center flex-grow">
+                <div>
+                    <a href="#app">
+                        <v-btn class="button" @click="dialog = false">
+                            Home
+                        </v-btn>
+                    </a>
+                </div>
+                <div>
+                    <a href="#about-hook">
+                        <v-btn class="button" @click="dialog = false">
+                            About me
+                        </v-btn>
+                    </a>
+                </div>
+                <div>
+                    <a href="#experiences-hook">
+                        <v-btn class="button" @click="dialog = false">
+                            Experiences
+                        </v-btn>
+                    </a>
+                </div>
+                <div>
+                    <a href="#project-hook">
+                        <v-btn class="button" @click="dialog = false">
+                            Project
+                        </v-btn>
+                    </a>
+                </div>
+            </div>
+        </v-dialog>
     </div>
 </template>
 

@@ -67,37 +67,39 @@ export default defineComponent({
          
 <template>
 
-  <v-container class="sub-container">
-    <div class="hook experiences-hook" id="experiences-hook">
-      <div class="primary-color">
-        02/ <br />
-        Experiences
+  <v-row class="sub-container">
+    <v-col>
+      <div class="hook experiences-hook" id="experiences-hook">
+        <div class="primary-color">
+          02/ <br />
+          Experiences
+        </div>
       </div>
-    </div>
-    <v-row>
-      <v-col class="text-center main-text marge">
-        <v-timeline side="end" align="start" color="white" class="timeline mt-8" line-color="primary" truncate-line="end">
-          <v-timeline-item v-for="(item, i) in data" color="primary" :key="i" dot-color="black"
-            fill-dot>
-            <template v-slot:icon>
-              <v-icon color="primary" size="large">
-                mdi-map-marker-radius
-              </v-icon>
-            </template>
-            <div class="third-text">
-              {{item.year}}
-            </div>
-            <div>
-              {{item.title}}
-            </div>
-            <div class="second-text">
-              {{item.subtitle}}
-            </div>
-          </v-timeline-item>
-        </v-timeline>
-      </v-col>
-    </v-row>
-  </v-container>
+      <v-row>
+        <v-col class="text-center main-text marge">
+          <v-timeline side="end" align="start" color="white" class="timeline mt-8" line-color="primary"
+            truncate-line="end">
+            <v-timeline-item v-for="(item, i) in data" color="primary" :key="i" dot-color="black" fill-dot>
+              <template v-slot:icon>
+                <v-icon color="primary" size="large">
+                  mdi-map-marker-radius
+                </v-icon>
+              </template>
+              <div class="third-text">
+                {{ item.year }}
+              </div>
+              <div>
+                {{ item.title }}
+              </div>
+              <div class="second-text">
+                {{ item.subtitle }}
+              </div>
+            </v-timeline-item>
+          </v-timeline>
+        </v-col>
+      </v-row>
+    </v-col>
+  </v-row>
 </template>
     
 <style scoped lang="scss">
@@ -125,12 +127,7 @@ export default defineComponent({
 
 .experiences-hook {
   position: absolute;
-  top: 210vh;
+  top: 200vh;
+  left: 3vw;
 }
-
-
-
-
-
-.card {}
 </style>

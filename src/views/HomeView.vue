@@ -30,7 +30,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <v-container fluid class="main">
+    <v-container fluid class="main pa-0 pt-1">
         <MenuComponent />
         <HomeComponentHead />
         <AboutMeComponent />
@@ -42,14 +42,5 @@ export default defineComponent({
 
 <style scoped lang="scss">
 @import '../styles/variable.scss';
-
-.main {
-    background-color: $black-color;
-    color: $white;
-    padding-left: 75px;
-    background-image: url('/background.svg');
-    height: 100%;
-
-}
 </style>
   

@@ -2,16 +2,6 @@
 import { defineComponent } from 'vue'
 import styles from '../styles/variable.scss'
 
-
-interface Item {
-    color: string,
-    year: string,
-    url: string,
-    text: string,
-    title: string,
-    subtitle: string
-}
-
 export default defineComponent({
     name: 'AboutMeComponent',
     data() {
@@ -20,36 +10,19 @@ export default defineComponent({
             selected: 0,
             sections: [
                 {
-                    title: "Hobbies",
+                    title: "About me",
                     content: `
-                    I AM PASSIONATE ABOUT COMPUTER SCIENCE SINCE MY CHILDHOOD AND LATER ABOUT
-                    ENTREPENEURSHIP. <br /> <br />
+                    I'VE BEEN PASSIONATE ABOUT COMPUTER SCIENCE AND ENTREPRENEURSHIP SINCE I WAS A CHILD. <br /> <br />
                     I LOVE LEARNING NEW THINGS AND OVERCOMING NEW CHALENGES.
-                    ON MY FREE TIME I LIKE TO GO TO THE GYM. <br /> <br />
+                    I ENJOY GOING TO THE GYM IN MY FREE TIME. <br /> <br />
                     I AM ALSO INTERESTED IN SELF DEVELOPMENT AND FINANCIAL EDUCATION.
                     `
                 },
                 {
-                    title: "What people says about me",
-                    content: `
-                    PEOPLE USED TO SAY ABOUT ME THAT I AM NOT VERY TALKATIVE AND CAN
-                    BE OVERCONFIDENT <br />
-                    HONNESTLY IT IS TRUE THAT I DONT TALK A LOT, BUT ONLY WHEN I AM NOT INTERESTED
-                    IN THE CONVERSATION <br /> <br />
-                    AND I AM CONFIDENT ONLY BECAUSE I KNOW THAT IN THIS WORLD EVERYTHING CAN BE DONE
-                    WITH HARD WORK. <br /> <br/>
-                    ACCORDING TO PEOPLE THEY THINK I THINK THIS WAY THIS BECAUSE I AM STILL YOUNG...
-                    <br />
-                    HOW LAUGHABLE...
-
-                    `
-                },
-                {
                     title: "Plan for the future",
-                    content: `I AM FIRST GOING TO MAKES AN INTERNSHIP ABOARD SO I CAN HAVE A FIRST EXPERIENCES IN DATA SCIENCE FIELD. <br /> <br />
-                    IN THE MEANTIME I WILL WORK ON MY BUISNESS IDEA THAT I HOPE WILL BE READY IN TWO TO THREE YEARS. <br /> <br />
-                    AFTER THIS I AM PLANNING TO START AS A FREELANCE SO I CAN MANAGE MY TIME FREELY TO WORK ON MY BUISNESS.
-                    `
+                    content: `I am actually looking for an internship to complete my master's degree. <br /> <br /> 
+                    Then I'll work for a few months to save money and gain experience before starting my own business, most likely as a freelancer to begin with. <br /> <br />
+                     As a result, I'm looking for an internship where I can gain real-world experience as a tech or a manager. Preferably in the finance or energy fields.`
                 }
             ]
         }
@@ -70,65 +43,47 @@ export default defineComponent({
          
 <template>
 
-    <v-container class="sub-container">
+    <v-row class="about-me sub-container ">
         <div class="hook" id="about-hook">
             <div class="primary-color">
                 01/ <br />
                 About
             </div>
         </div>
-        <v-row>
-            <v-col>
-                <v-tabs slider-color="primary" v-model="selected" grow>
-                    <v-tab v-for="section, i in sections" :value="i" class="text-h3">
-                        {{ section.title }}
-                    </v-tab>
-                </v-tabs>
-            </v-col>
-        </v-row>
+        <v-col>
+            <v-row>
+                <v-spacer class="d-none d-md-flex" />
+                <v-col>
+                    <v-tabs slider-color="primary" v-model="selected" grow>
+                        <v-tab v-for="section, i in sections" :value="i" class="text-h3">
+                            {{ section.title }}
+                        </v-tab>
+                    </v-tabs>
+                </v-col>
+                <v-spacer class="d-none d-md-flex" />
+            </v-row>
 
-        <v-row class="text-center title">
-            <v-col sm="2" />
-            <v-col>
-                <v-window v-model="selected">
-                    <div v-html="sections[selected].content" class="main-text text" />
-                </v-window>
-            </v-col>
-            <v-col sm="2" />
-        </v-row>
-        <!-- <v-row class="text-center title">
-
-            <v-col sm="2">
-            </v-col>
-            <v-col class="main-text text">
-                <v-row>
-                    PASSIONATE ABOUT COMPUTER SCIENCE SINCE MY CHILDHOOD AND LATER ABOUT
-                    ENTREPENEURSHIP.
-                    I LOVE LEARNING NEW THINGS AND OVERCOMING NEW CHALENGES.
-                </v-row>
-                <v-row class="mt-16">
-                    ON MY FREE TIME I LIKE TO GO TO THE GYM. <br />
-                    I AM ALSO INTERESTED IN SELF DEVELOPMENT AND FINANCIAL EDUCATION.
-                </v-row>
-                <v-row class="mt-16">
-                    PEOPLE USED TO SAY ABOUT ME THAT I AM NOT VERY TALKATIVE AND CAN
-                    BE OVERCONFIDENT <br />
-                    HONNESTLY IT IS TRUE THAT I DONT TALK A LOT, BUT ONLY WHEN I AM NOT INTERESTED
-                    IN THE CONVERSATION <br />
-                    AND I AM CONFIDENT ONLY BECAUSE I KNOW THAT IN THIS WORLD EVERYTHING CAN BE DONE
-                    WITH HARD WORK. <br />
-                    ACCORDING TO PEOPLE THEY THINK I THINK THIS WAY THIS BECAUSE I AM STILL YOUNG...
-                    <br />
-                    HOW LAUGHABLE...
-                </v-row>
-            </v-col>
-            <v-col sm="1"></v-col>
-        </v-row> -->
-    </v-container>
+            <v-row class="text-center title">
+                <v-col sm="2" class="d-none d-md-flex" />
+                <v-col>
+                    <v-window v-model="selected">
+                        <div v-html="sections[selected].content" class="main-text text" />
+                    </v-window>
+                </v-col>
+                <v-col sm="2" class="d-none d-md-flex" />
+            </v-row>
+        </v-col>
+    </v-row>
 </template>
     
 <style scoped lang="scss">
 @import '../styles/variable.scss';
+
+
+.about-me {
+    padding-top: 15vh;
+    padding-bottom: 10vh;
+}
 
 .v-btn {
     background-color: transparent !important;
@@ -137,7 +92,8 @@ export default defineComponent({
 
 #about-hook {
     position: absolute;
-    top: 110vh;
+    top: 100vh;
+    left: 3vw;
 }
 
 .text {

@@ -5,12 +5,12 @@ $primary-dark-2: #733729;
 $white: #F2F2F2;
 
 .sub-container {
-    height: 100vh;
+    min-height: 100vh;
     margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    margin-right: 0;
-    margin-left: 75px;
+    // margin-bottom: 0;
+    // padding-top: 0;
+    // margin-right: 0;
+    // margin-left: 75px;
     padding-bottom: 0;
 }
 
@@ -31,6 +31,14 @@ $white: #F2F2F2;
     font-size: 2Rem;
 }
 
+.text {
+    // font-style: 65 medium;
+    line-height: 5Rem;
+    font-size: 2.2Rem;
+    font-weight: 500;
+    text-shadow: none;
+}
+
 .main-text {
     font-style: 65 medium;
     font-size: 3.5Rem;
@@ -42,10 +50,44 @@ $white: #F2F2F2;
 }
 
 :root {
-    font-size: 10px;
+    font-size: 7px;
 }
+
+@media screen and (min-width:600px) {
+    :root {
+        font-size: 10px;
+    }
+}
+
 
 a {
     text-decoration: none;
     color: white;
+}
+
+.large-title {
+    font-size: 12.5Rem;
+    line-height: 11.5Rem;
+    font-family: 'Valkyrie';
+    font-weight: bold;
+    font-stretch: expanded;
+    color: $white;
+    text-shadow: $primary 5px 3px 0;
+}
+
+.marge {
+    margin-top: 161px !important;
+}
+
+.avatar {
+    margin-top: -3Rem;
+}
+
+.main {
+    background-color: $black-color;
+    color: $white;
+    // padding-left: 75px;
+    background-image: url('/background.svg');
+    height: 100%;
+
 }

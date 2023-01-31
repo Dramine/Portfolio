@@ -30,7 +30,7 @@ export default defineComponent({
             <v-btn variant="text" @click="mail">
                 <div class="d-block">
                     <v-icon :size="iconSize" icon="mdi-email" />
-                    <div class="item-font-size mt-2">{{ email }}</div>
+                    <div class="d-none d-md-flex item-font-size mt-2">{{ email }}</div>
                 </div>
             </v-btn>
         </div>
@@ -38,7 +38,7 @@ export default defineComponent({
             <v-btn variant="text" @click="call">
                 <div class="d-block">
                     <v-icon :size="iconSize" icon="mdi-phone" />
-                    <div class="item-font-size mt-2">{{ phone }}</div>
+                    <div class="d-none d-md-flex item-font-size mt-2">{{ phone }}</div>
                 </div>
             </v-btn>
         </div>
@@ -57,7 +57,7 @@ export default defineComponent({
 @import '../styles/variable.scss';
 
 .footer {
-    height: 10vh;
+    height: 8vh;
     background-color: $primary;
     position: absolute;
     bottom: 0;
@@ -68,7 +68,9 @@ export default defineComponent({
     border-width: 2px;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    // align-items: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
     flex-wrap: wrap;
 }
 
