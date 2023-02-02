@@ -12,10 +12,10 @@ export default defineComponent({
                 {
                     title: "About me",
                     content: `
-                    I'VE BEEN PASSIONATE ABOUT COMPUTER SCIENCE AND ENTREPRENEURSHIP SINCE I WAS A CHILD. <br /> <br />
-                    I LOVE LEARNING NEW THINGS AND OVERCOMING NEW CHALENGES.
-                    I ENJOY GOING TO THE GYM IN MY FREE TIME. <br /> <br />
-                    I AM ALSO INTERESTED IN SELF DEVELOPMENT AND FINANCIAL EDUCATION.
+                    I've been passionate about computer science and entrepreneurship since I was a child. <br /> <br />
+                    I love learning new things and overcoming new chalenges.
+                    I enjoy going to the gym in my free time. <br /> <br />
+                    I am also interested in self development and financial education.
                     `
                 },
                 {
@@ -50,7 +50,7 @@ export default defineComponent({
                 About
             </div>
         </div>
-        <v-col>
+        <v-col class="pl-8 pr-8">
             <v-row>
                 <v-spacer class="d-none d-md-flex" />
                 <v-col>

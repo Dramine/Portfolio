@@ -58,7 +58,7 @@ export default defineComponent({
                 </div>
             </div>
             <v-row class="maine">
-                <v-col sm="1" />
+                <v-col sm="0" />
                 <v-col id="panel" sm="2">
                     <v-tabs v-model="selectedProject" direction="vertical" color="tranparent" class="test" grow>
                         <v-tab v-for="project in projects" class="text-h4" color="tranparent" :ref="project.title">
@@ -86,10 +86,10 @@ export default defineComponent({
                             <div id="github-icon">
                                 <v-btn v-if="project.docurl != ''" icon class="mr-6"
                                     @click="openExternalUrl(project?.docurl)">
-                                    <v-icon size="28"> mdi-file-pdf-box</v-icon>
+                                    <v-icon size="28" color=white> mdi-file-pdf-box</v-icon>
                                 </v-btn>
                                 <v-btn icon @click="openExternalUrl(project?.githuburl)">
-                                    <v-icon size="28">mdi-github</v-icon>
+                                    <v-icon size="28" color="white">mdi-github</v-icon>
                                 </v-btn>
                             </div>
                         </v-window-item>

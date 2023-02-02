@@ -41,34 +41,32 @@ export default defineComponent({
     <v-row class="sub-container" id="home">
         <v-col>
             <v-row class="marge">
-                <v-col class="large-title">
+                <v-col class="large-title pl-4 pl-md-8">
                     DATA <br />
                     SCIENTIST
                 </v-col>
             </v-row>
             <v-row>
-                <v-col class="text-center">
-                    <v-avatar color="blue-light" size="300" class="avatar">
+                <v-col class="text-center d-flex">
+                    <v-avatar color="blue-light" size="300" class="avatar ml-16">
                         <v-img cover src="pdp.png" />
                     </v-avatar>
-                </v-col>
-                <v-col></v-col>
-            </v-row>
-            <v-row class="large-title">
-                <v-col class="d-flex justify-end">
-                    <div class="quote">
-
-                        <div class="quote justify-center text pl-4">
+                    <div class="quote align-center pb-8 justify-center">
+                        <div class="text pl-4">
                             <v-window v-model="selectedQuote">
                                 <v-window-item v-for="quote, i in quotes" :ref="quote + '-window'" :value="i">
                                     <div> {{ quotes[i].quote }}
                                     </div>
-                                    {{quotes[i]?.author}}
+                                    {{ quotes[i]?.author }}
                                 </v-window-item>
                             </v-window>
                         </div>
                     </div>
-                    <div>
+                </v-col>
+            </v-row>
+            <v-row class="large-title">
+                <v-col class="d-flex justify-end">
+                    <div class="pr-4 pr-md-8">
                         AMINE <br />
                         BOUJEMT
                     </div>
