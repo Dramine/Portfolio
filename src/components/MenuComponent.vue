@@ -50,7 +50,7 @@ export default defineComponent({
             <template v-slot:activator="{ props }">
                 <v-btn icon="mdi-menu" color="primary" dark v-bind="props" />
             </template>
-            <div class="main d-flex flex-column justify-space-around align-center flex-grow">
+            <div class="main d-flex flex-column justify-space-around align-center flex-grow" >
                 <div>
                     <a href="#app">
                         <v-btn class="button" @click="dialog = false">
@@ -84,16 +84,21 @@ export default defineComponent({
     </div>
 </template>
 
-<style>
+<style lang="scss">
+@import '../styles/variable.scss';
+
 .button {
     height: 45px;
     font-weight: 500;
     font-size: 18px;
+    z-index: 10000;
+    color: $white;
 }
 
 .menu {
     position: fixed;
     margin-top: 40px;
     right: 87px;
+    z-index: 1000;
 }
 </style>
