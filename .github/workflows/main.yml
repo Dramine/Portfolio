@@ -14,6 +14,10 @@ jobs:
           node-version: 16
       - name: Install dependencies
         run: npm install
+      - name: Set mail
+        run: git config --global user.email "aminedu38390@hotmail.fr"
+      - name: Set name
+        run: git config --global user.name "Dramine"
       - name: Build repo
-        run: npm run build
+        run: npm run deploy
         
