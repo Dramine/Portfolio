@@ -13,7 +13,7 @@ export async function loadFonts() {
     },
     custom: {
       families: ['lemon_milk'],
-      urls: ['/public/styles/font.css']
+      urls: ['/Portfolio/styles/font.css']
     }
 
   })

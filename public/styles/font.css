@@ -4,7 +4,7 @@
   font-weight: normal;
   font-display: swap;
   font-stretch: normal;
-  src: url('/public/valkyrie/Valkyrie-Regular.ttf') format('truetype');
+  src: url('/Portfolio/Valkyrie/Valkyrie-Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -13,7 +13,7 @@
   font-weight: bold;
   font-display: swap;
   font-stretch: normal;
-  src: url('/public/valkyrie/Valkyrie-Bold.ttf') format('truetype');
+  src: url('/Portfolio/Valkyrie/Valkyrie-Bold.ttf') format('truetype');
 }
 
 @font-face {
@@ -22,5 +22,5 @@
   font-weight: bold;
   font-display: swap;
   font-stretch: expanded;
-  src: url('/public/valkyrie/Valkyrie-BoldExtended.ttf') format('truetype');
+  src: url('/Portfolio/Valkyrie/Valkyrie-BoldExtended.ttf') format('truetype');
 }
