@@ -10,6 +10,7 @@ export default defineConfig({
 		vue(),
 		vuetify({ autoImport: true }),
 	],
+	base: '/Portfolio/',
 	server: {
 		port: 8080
 	},
