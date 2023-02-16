@@ -32,7 +32,7 @@ export default defineComponent({
                     description: 'We trained a gan model to generate landscape image using gaugan method, from dataset creation to image generation. We obtained pretty fair result considering the limited time we had. You can download the report to assess them.',
                     githuburl: 'https://github.com/Mathieuchambard/DeepLearningProject',
                     spec: ['Pytorch', 'GAN'],
-                    docurl: 'https://www.overleaf.com/download/project/63bbeb6588a5507eccf1293d/build/186089e4404-b592cf035a80227a/output/output.pdf?compileGroup=standard&clsiserverid=clsi-pre-emp-e2-f-5g09&enable_pdf_caching=true&popupDownload=true'
+                    docurl: 'deep.pdf'
                 }
             ]
         }
